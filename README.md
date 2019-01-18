@@ -14,4 +14,4 @@ Todo
 
 ## License
 
-[MIT](https://github.com/Jetea/app/blob/master/LICENSE)
+[MIT](https://opensource.org/licenses/MIT)
