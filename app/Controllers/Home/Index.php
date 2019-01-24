@@ -2,12 +2,19 @@
 
 namespace App\Controllers\Home;
 
-use Jetea\Framework\Routing\Controller;
+use App\Controllers\Controller;
 
 class Index extends Controller
 {
     public function index()
     {
-        return 'hello world.';
+//        echo count(get_included_files());
+//        return ' hello Jetea';
+        $name = 'Jetea';
+
+        return $this->render(
+            '/Home/index.html',
+            compact('name')
+        );
     }
 }

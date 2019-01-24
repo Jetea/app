@@ -5,9 +5,39 @@ namespace App;
 use App\Exceptions\Handler;
 use Jetea\Framework\Routing\Router;
 use Jetea\Framework\Routing\Routes;
+use Ctx\Ctx;
 
 class Application extends \Jetea\Framework\Application
 {
+    /**
+     * @var \Ctx\Ctx
+     */
+    private $ctx;
+
+    protected function __construct()
+    {
+        parent::__construct();
+
+        $this->ctx = Ctx::getInstance();
+
+        $this->config = array_merge(
+            $this->config,
+            $this->ctx->Ctx->getConf('app')
+        );
+    }
+
+    public function getCtx()
+    {
+        return $this->ctx;
+    }
+
+    protected $config = [
+        'debug'         => false,
+        'view'          => [
+            'cache'     => __DIR__ . '/../storage/views',
+        ],
+    ];
+
     /**
      * web 全局中间件
      */
@@ -20,7 +50,7 @@ class Application extends \Jetea\Framework\Application
      */
     protected function getExceptionsHandler()
     {
-        return new Handler(true);
+        return new Handler($this->config('debug'));
     }
 
     /**
