@@ -5,7 +5,7 @@ Jetea is a fresh and fast php framework.Jetea attempts to take the pain out of d
 ## Installation
 
 ```
-composer create-project jetea/app=~1.0
+composer create-project jetea/app=~2.0
 ```
 
 ## Usage
