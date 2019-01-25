@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<phpunit bootstrap="../vendor/autoload.php"
+<phpunit bootstrap="./vendor/autoload.php"
     colors="true"
     convertErrorsToExceptions="true"
     convertNoticesToExceptions="true"
@@ -8,12 +8,10 @@
     stopOnFailure="true">
     <testsuites>
         <testsuite name="Ctx Test Suite">
-            <directory>./tests</directory>
+            <directory>./ctx/tests</directory>
         </testsuite>
     </testsuites>
     <php>
-        <env name="APP_ENV" value="testing"/>
         <env name="APP_DEBUG" value="true"/>
-        <env name="DEBUG_OUTPUT" value="false"/>
     </php>
 </phpunit>

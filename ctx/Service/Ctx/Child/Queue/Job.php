@@ -3,14 +3,18 @@
 namespace Ctx\Service\Ctx\Child\Queue;
 
 use Ctx\Ctx;
-use Tree6bee\Queue\Job as BasicJob;
+use Jetea\Queue\Job as BasicJob;
 
 abstract class Job extends BasicJob
 {
     /**
-     * @var string job 采用的连接
+     * The name of the connection the job should be sent to.
+     *
+     * 在 ctx/Service/Ctx/Child/Queue.php getQueue 方法中被使用
+     *
+     * @var string|null
      */
-    public $conn = 'default';
+    public $connection = 'default';
 
     /**
      * @var Ctx

@@ -3,8 +3,8 @@
 namespace Ctx\Service\Ctx\Child\Queue;
 
 use Ctx\Ctx;
-use Tree6bee\Queue\Worker as BasicWorker;
-use Tree6bee\Queue\Job;
+use Jetea\Queue\Worker as BasicWorker;
+use Jetea\Queue\Job;
 
 class Worker extends BasicWorker
 {
