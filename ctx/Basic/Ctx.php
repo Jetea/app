@@ -2,7 +2,7 @@
 
 namespace Ctx\Basic;
 
-use PHPCtx\Ctx\Basic\Ctx as BasicCtx;
+use Jetea\Ctx\Basic\Ctx as BasicCtx;
 
 /**
  * Ctx基类

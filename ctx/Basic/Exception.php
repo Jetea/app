@@ -2,7 +2,7 @@
 
 namespace Ctx\Basic;
 
-use PHPCtx\Ctx\Exceptions\Exception as BasicException;
+use Jetea\Ctx\Exceptions\Exception as BasicException;
 
 /**
  * 框架异常
