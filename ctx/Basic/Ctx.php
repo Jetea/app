@@ -3,7 +3,6 @@
 namespace Ctx\Basic;
 
 use PHPCtx\Ctx\Basic\Ctx as BasicCtx;
-//use Tree6bee\Support\Ctx\Rpc\Client;
 
 /**
  * Ctx基类
